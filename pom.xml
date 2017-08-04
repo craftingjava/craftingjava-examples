@@ -9,6 +9,10 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>SpringUni Examples</name>
 
+  <modules>
+    <module>springuni-jms-sqs</module>
+  </modules>
+
   <properties>
     <build-helper-maven-plugin.version>1.8</build-helper-maven-plugin.version>
     <checkstyle.version>7.6.1</checkstyle.version>
