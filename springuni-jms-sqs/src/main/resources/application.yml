@@ -1,0 +1,11 @@
+amazon:
+  sqs:
+    region: ${AMAZON_SQS_REGION:us-east-1}
+    endpoint: ${AMAZON_SQS_ENDPOINT}
+    accessKey: ${AMAZON_SQS_ACCESS_KEY}
+    secretKey: ${AMAZON_SQS_SECRET_KEY}
+    numberOfMessagesToPrefetch: ${AMAZON_SQS_NUMBER_OF_MESSAGES_TO_PREFETCH:5}
+    extended:
+      s3BucketName: ${AMAZON_SQS_EXT_S3_BUCKET_NAME}
+      s3AccessKey: ${AMAZON_SQS_EXT_S3_ACCESS_KEY}
+      s3SecretKey: ${AMAZON_SQS_EXT_S3_SECRET_KEY}
