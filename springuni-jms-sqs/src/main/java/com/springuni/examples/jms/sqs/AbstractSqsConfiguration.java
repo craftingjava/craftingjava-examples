@@ -17,14 +17,47 @@ import com.amazonaws.services.s3.model.BucketLifecycleConfiguration;
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
 import javax.jms.ConnectionFactory;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jms.annotation.EnableJms;
+import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
+import org.springframework.jms.config.JmsListenerContainerFactory;
+import org.springframework.jms.core.JmsOperations;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.util.StringUtils;
 
 /**
  * Created by lcsontos on 8/4/17.
  */
+@Configuration
+@EnableConfigurationProperties(SqsProperties.class)
+@EnableJms
 public abstract class AbstractSqsConfiguration {
 
+  @Bean
   public abstract ConnectionFactory connectionFactory(SqsProperties sqsProperties);
+
+  @Bean
+  public JmsListenerContainerFactory<?> jmsListenerContainerFactory(
+      ConnectionFactory connectionFactory) {
+
+    DefaultJmsListenerContainerFactory jmsListenerContainerFactory =
+        new DefaultJmsListenerContainerFactory();
+    jmsListenerContainerFactory.setConnectionFactory(connectionFactory);
+    jmsListenerContainerFactory.setSessionTransacted(false);
+
+    return jmsListenerContainerFactory;
+  }
+
+  @Bean
+  public JmsTemplate jmsTemplate(
+      SqsProperties sqsProperties, ConnectionFactory connectionFactory) {
+
+    JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory);
+    jmsTemplate.setDefaultDestinationName(sqsProperties.getQueueName());
+    return jmsTemplate;
+  }
 
   protected SQSConnectionFactory createStandardSQSConnectionFactory(SqsProperties sqsProperties) {
     AmazonSQS sqsClient = createAmazonSQSClient(sqsProperties);

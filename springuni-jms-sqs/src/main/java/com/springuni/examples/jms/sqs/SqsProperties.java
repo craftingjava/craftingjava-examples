@@ -25,7 +25,7 @@ public class SqsProperties {
     return Optional.ofNullable(numberOfMessagesToPrefetch);
   }
 
-  public String getQueueName(String endpoint) {
+  public String getQueueName() {
     URI endpointUri = URI.create(endpoint);
     String path = endpointUri.getPath();
     int pos = path.lastIndexOf('/');
