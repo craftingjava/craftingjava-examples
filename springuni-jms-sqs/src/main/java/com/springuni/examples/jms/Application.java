@@ -3,6 +3,7 @@ package com.springuni.examples.jms;
 import static org.springframework.context.annotation.FilterType.ASSIGNABLE_TYPE;
 
 import com.springuni.examples.jms.sqs.AbstractSqsConfiguration;
+import com.springuni.examples.jms.sqs.ExtendedSqsConfiguration;
 import com.springuni.examples.jms.sqs.StandardSqsConfiguration;
 import java.io.File;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +21,7 @@ import org.springframework.context.annotation.PropertySource;
     basePackages = "com.springuni.examples.jms",
     excludeFilters = @Filter(type = ASSIGNABLE_TYPE, value = AbstractSqsConfiguration.class)
 )
-@Import(StandardSqsConfiguration.class)
+@Import(ExtendedSqsConfiguration.class)
 @PropertySource(name = "dev", value = "file:.env", ignoreResourceNotFound = true)
 @Slf4j
 @SpringBootApplication

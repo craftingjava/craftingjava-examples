@@ -24,6 +24,7 @@ import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.support.destination.DestinationResolver;
 import org.springframework.util.StringUtils;
 
 /**
@@ -38,12 +39,18 @@ public abstract class AbstractSqsConfiguration {
   public abstract ConnectionFactory connectionFactory(SqsProperties sqsProperties);
 
   @Bean
+  public DestinationResolver destinationResolver(SqsProperties sqsProperties) {
+    return new SqsDestinationResolver(sqsProperties.getQueueName());
+  }
+
+  @Bean
   public JmsListenerContainerFactory<?> jmsListenerContainerFactory(
-      ConnectionFactory connectionFactory) {
+      ConnectionFactory connectionFactory, DestinationResolver destinationResolver) {
 
     DefaultJmsListenerContainerFactory jmsListenerContainerFactory =
         new DefaultJmsListenerContainerFactory();
     jmsListenerContainerFactory.setConnectionFactory(connectionFactory);
+    jmsListenerContainerFactory.setDestinationResolver(destinationResolver);
     jmsListenerContainerFactory.setSessionTransacted(false);
 
     return jmsListenerContainerFactory;

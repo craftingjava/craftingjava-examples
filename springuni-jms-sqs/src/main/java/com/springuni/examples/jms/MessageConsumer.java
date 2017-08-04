@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class MessageConsumer {
 
-  @JmsListener(destination = "LoggerQueue-dev")
+  @JmsListener(destination = "")
   public void receive(@Payload String message) {
     log.info("Received message {}.", message);
   }
