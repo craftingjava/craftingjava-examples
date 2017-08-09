@@ -15,8 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class MessageProducer {
 
+  private final JmsOperations jmsTemplate;
+
   @Autowired
-  private JmsOperations jmsTemplate;
+  public MessageProducer(JmsOperations jmsTemplate) {
+    this.jmsTemplate = jmsTemplate;
+  }
 
   @PostMapping("/message")
   public ResponseEntity sendMessage(@RequestBody String message) {
