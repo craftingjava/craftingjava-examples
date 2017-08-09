@@ -8,11 +8,11 @@ import org.springframework.jms.support.destination.DestinationResolver;
 /**
  * Created by lcsontos on 8/4/17.
  */
-public class SqsDestinationResolver implements DestinationResolver {
+public class StaticDestinationResolver implements DestinationResolver {
 
   private final String queueName;
 
-  public SqsDestinationResolver(String queueName) {
+  public StaticDestinationResolver(String queueName) {
     this.queueName = queueName;
   }
 

@@ -40,7 +40,7 @@ public abstract class AbstractSqsConfiguration {
 
   @Bean
   public DestinationResolver destinationResolver(SqsProperties sqsProperties) {
-    return new SqsDestinationResolver(sqsProperties.getQueueName());
+    return new StaticDestinationResolver(sqsProperties.getQueueName());
   }
 
   @Bean
