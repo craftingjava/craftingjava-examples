@@ -1,4 +1,4 @@
-package com.springuni.examples.springcloudstreampubsubconsumer;
+package com.springuni.examples.pubsub.producer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringCloudStreamPubsubConsumerApplicationTests {
+public class PubsubProducerApplicationTests {
 
 	@Test
 	public void contextLoads() {
