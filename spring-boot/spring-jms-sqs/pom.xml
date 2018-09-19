@@ -67,7 +67,8 @@
           <!-- https://github.com/spring-projects/spring-boot/issues/6254#issuecomment-229600830 -->
           <classifier>exec</classifier>
           <!-- http://docs.spring.io/autorepo/docs/spring-boot/1.5.3.RELEASE/maven-plugin/examples/run-debug.html -->
-          <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
+          <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+          </jvmArguments>
         </configuration>
       </plugin>
     </plugins>

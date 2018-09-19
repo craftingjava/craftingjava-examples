@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PubsubProducerApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(PubsubProducerApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(PubsubProducerApplication.class, args);
+  }
 
 }

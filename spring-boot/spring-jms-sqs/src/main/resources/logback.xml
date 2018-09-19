@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true">
-    <!-- use Spring default values -->
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+  <!-- use Spring default values -->
+  <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M:%line - %msg%n</pattern>
-            <charset>utf8</charset>
-        </encoder>
-    </appender>
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="CONSOLE">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M:%line - %msg%n
+      </pattern>
+      <charset>utf8</charset>
+    </encoder>
+  </appender>
 
-    <logger name="org.springframework" level="INFO" />
-    <logger name="org.springframework.jms" level="DEBUG" />
-    <logger name="org.apache.commons" level="INFO"/>
-    <logger name="nl.wizenoze" level="INFO"/>
+  <logger level="INFO" name="org.springframework"/>
+  <logger level="DEBUG" name="org.springframework.jms"/>
+  <logger level="INFO" name="org.apache.commons"/>
+  <logger level="INFO" name="nl.wizenoze"/>
 
-    <root level="DEBUG"><appender-ref ref="CONSOLE" /></root>
+  <root level="DEBUG">
+    <appender-ref ref="CONSOLE"/>
+  </root>
 
 </configuration>

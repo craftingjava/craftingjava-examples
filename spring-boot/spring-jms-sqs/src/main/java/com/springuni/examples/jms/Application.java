@@ -4,7 +4,6 @@ import static org.springframework.context.annotation.FilterType.ASSIGNABLE_TYPE;
 
 import com.springuni.examples.jms.sqs.AbstractSqsConfiguration;
 import com.springuni.examples.jms.sqs.ExtendedSqsConfiguration;
-import com.springuni.examples.jms.sqs.StandardSqsConfiguration;
 import java.io.File;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
