@@ -15,8 +15,8 @@
   <name>Spring Cloud Examples</name>
 
   <modules>
-    <module>spring-cloud-stream-pubsub-consumer</module>
-    <module>spring-cloud-stream-pubsub-producer</module>
+    <module>spring-cloud-stream-pubsub-subscriber</module>
+    <module>spring-cloud-stream-pubsub-publisher</module>
   </modules>
 
   <packaging>pom</packaging>
