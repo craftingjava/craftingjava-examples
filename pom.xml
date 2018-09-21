@@ -16,4 +16,30 @@
 
   <packaging>pom</packaging>
 
+  <organization>
+    <name>Laszlo Csontos (sole trader)</name>
+    <url>https://springuni.com/</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git@github.com:springuni/springuni-examples.git</connection>
+    <url>https://github.com/springuni/springuni-examples</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>lcsontos</id>
+      <name>Laszlo Csontos</name>
+      <email>github at laszlocsontos.com</email>
+    </developer>
+  </developers>
+
 </project>
