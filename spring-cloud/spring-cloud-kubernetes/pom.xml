@@ -6,18 +6,16 @@
 
   <parent>
     <groupId>com.springuni.examples</groupId>
-    <artifactId>springuni-examples</artifactId>
+    <artifactId>spring-cloud</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>spring-cloud</artifactId>
+  <artifactId>spring-cloud-kubernetes</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <name>Spring Cloud Examples</name>
+  <name>Spring Cloud Kubernetes Examples</name>
 
   <modules>
-    <module>spring-cloud-stream-pubsub-subscriber</module>
-    <module>spring-cloud-stream-pubsub-publisher</module>
-    <module>spring-cloud-kubernetes</module>
+    <module>kubernetes-configmap</module>
   </modules>
 
   <packaging>pom</packaging>
