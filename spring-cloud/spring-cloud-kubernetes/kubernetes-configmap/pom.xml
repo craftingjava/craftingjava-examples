@@ -40,7 +40,7 @@
 
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-kubernetes-core</artifactId>
+      <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
     </dependency>
 
     <!-- Test deps -->

@@ -1,0 +1,14 @@
+spring:
+  application:
+    # The default behavior is to create a ConfigMapPropertySource based on a Kubernetes ConfigMap which
+    # has metadata.name of either the name of your Spring application or a custom name defined within
+    # the bootstrap.properties file under the following key spring.cloud.kubernetes.config.name.
+    name: kubernetes-configmap
+  cloud:
+    kubernetes:
+      # Some applications may need to detect changes on external property sources and update their
+      # internal status to reflect the new configuration. The reload feature of Spring Cloud
+      # Kubernetes is able to trigger an application reload when a related ConfigMap or Secret
+      # changes.
+      reload:
+        enabled: true
