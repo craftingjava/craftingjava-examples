@@ -91,6 +91,28 @@
         <groupId>io.fabric8</groupId>
         <artifactId>fabric8-maven-plugin</artifactId>
         <version>${fabric8.maven.plugin.version}</version>
+
+        <!--
+        <configuration>
+          <verbose>true</verbose>
+          <images>
+            <image>
+              <registry>gcr.io</registry>
+              <name>${gcp.project.id}/${project.artifactId}</name>
+            </image>
+          </images>
+        </configuration>
+        <executions>
+          <execution>
+            <id>fmp</id>
+            <goals>
+              <goal>resource</goal>
+              <goal>build</goal>
+              <goal>push</goal>
+            </goals>
+          </execution>
+        </executions>
+        -->
       </plugin>
     </plugins>
   </build>
