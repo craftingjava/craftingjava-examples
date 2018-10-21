@@ -20,14 +20,20 @@
   </parent>
 
   <properties>
+    <maven.compiler.source>1.11</maven.compiler.source>
+    <maven.compiler.target>1.11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>1.8</java.version>
     <spring-cloud.version>Finchley.SR1</spring-cloud.version>
     <spring-cloud-kubernetes.version>0.3.0.RELEASE</spring-cloud-kubernetes.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -40,7 +46,7 @@
 
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
+      <artifactId>spring-cloud-starter-kubernetes</artifactId>
     </dependency>
 
     <!-- Test deps -->

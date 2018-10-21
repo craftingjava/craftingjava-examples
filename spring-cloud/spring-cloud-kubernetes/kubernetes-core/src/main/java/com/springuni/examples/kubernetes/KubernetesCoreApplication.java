@@ -2,12 +2,14 @@ package com.springuni.examples.kubernetes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class KubernetesConfigMapApplication {
+@EnableDiscoveryClient
+public class KubernetesCoreApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(KubernetesConfigMapApplication.class, args);
+    SpringApplication.run(KubernetesCoreApplication.class, args);
   }
 
 }
