@@ -9,7 +9,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-cloud-stream-pubsub-publisher</name>
+  <name>Spring Cloud Kubernetes ConfigMap Example</name>
   <description>Spring Cloud Kubernetes ConfigMap Example</description>
 
   <parent>

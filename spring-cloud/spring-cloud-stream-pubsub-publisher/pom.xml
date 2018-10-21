@@ -9,7 +9,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-cloud-stream-pubsub-publisher</name>
+  <name>Spring Cloud Stream GCP Publisher Example</name>
   <description>Spring Cloud Stream GCP Pub/Sub Publisher Example</description>
 
   <parent>

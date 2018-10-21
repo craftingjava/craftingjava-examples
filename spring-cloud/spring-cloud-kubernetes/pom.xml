@@ -16,6 +16,7 @@
 
   <modules>
     <module>kubernetes-configmap</module>
+    <module>kubernetes-core</module>
   </modules>
 
   <packaging>pom</packaging>
