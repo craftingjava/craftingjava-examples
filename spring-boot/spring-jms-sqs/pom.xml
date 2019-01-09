@@ -19,7 +19,7 @@
   </properties>
 
   <artifactId>spring-jms-sqs</artifactId>
-  <groupId>com.springuni.examples</groupId>
+  <groupId>com.craftingjava.examples</groupId>
   <version>1.0.0-SNAPSHOT</version>
   <name>Spring JMS/SQS Example</name>
 
