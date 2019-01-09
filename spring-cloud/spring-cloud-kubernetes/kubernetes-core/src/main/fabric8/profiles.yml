@@ -4,4 +4,4 @@
     - spring-boot
     config:
       spring-boot:
-        name: gcr.io/springuni-examples/%a:%v
+        name: gcr.io/craftingjava-examples/%a:%v
